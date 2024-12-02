@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 //using System.Diagnostics;
 using TMPro;
 using UnityEngine;
@@ -57,7 +58,7 @@ public class Calendar : MonoBehaviour
         dayObjects.Clear();
 
         // ”станавливаем название мес€ца и года в формате "/ Month Year"
-        monthYearText.text = $"{currentDate.ToString("MMMM yyyy")}";
+        monthYearText.text = $"{currentDate.ToString("MMMM yyyy", CultureInfo.InvariantCulture)}";
 
         // ѕолучаем дату первого дн€ мес€ца
         DateTime firstDayOfMonth = new DateTime(currentDate.Year, currentDate.Month, 1);
